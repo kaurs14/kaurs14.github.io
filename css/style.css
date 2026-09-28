@@ -1,51 +1,333 @@
-/* =====================================
-   1x3 Subplot Layout
-   ===================================== */
+/* =========================================
+   SIMRAN KAUR — ASTRONOMY WEBSITE
+   style.css
+   ========================================= */
 
-.subplot-1x3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);  /* three columns */
-  gap: 1rem;                              /* space between panels */
-  margin: 2rem auto;
-  max-width: 100px;                      /* max width of the subplot */
+
+/* =========================================
+   GENERAL PAGE
+   ========================================= */
+
+html {
+  scroll-behavior: smooth;
 }
 
-/* Individual panel */
-.subplot-panel {
-  position: relative;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 8px;
-  padding: 0.5rem;
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+
+  background: radial-gradient(
+    circle at top,
+    #0b1026,
+    #000000
+  );
+
+  color: #eaeaf0;
+  line-height: 1.6;
 }
 
-/* Panel images */
-.subplot-panel img {
-  width: 100%;       /* fill panel width */
-  max-width: 250px;  /* limit maximum width */
-  height: auto;      /* keep aspect ratio */
-  object-fit: contain; /* ensures entire figure fits */
-  display: block;
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("images/hero.jpg") center/cover no-repeat;
+
+  padding: 4.5rem 2rem;
+
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+
+  font-size: 2.8rem;
+
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.15rem;
+
+  margin: 0;
+
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+
+nav {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 2rem;
+
+  background: #060914;
+
+  padding: 1rem;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+}
+
+nav a {
+  color: #8ab4ff;
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   MAIN SECTIONS
+   ========================================= */
+
+section {
+  max-width: 1000px;
+
   margin: 0 auto;
+
+  padding: 3rem 2rem;
 }
 
-/* Panel labels (a), (b), (c) */
-.panel-label {
-  position: absolute;
-  top: 8px;
-  left: 10px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  background: rgba(0,0,0,0.6);
-  padding: 2px 6px;
-  border-radius: 4px;
+
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+h2 {
+  font-family: 'Orbitron', sans-serif;
+
+  color: #8ab4ff;
+
+  margin-top: 0;
+
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  color: #ffffff;
+
+  margin-top: 0;
+
+  margin-bottom: 0.7rem;
+}
+
+
+/* =========================================
+   CARDS
+   ========================================= */
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+
+  padding: 1.5rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.card p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/* =========================================
+   RESEARCH FIGURE GALLERY
+   ========================================= */
+
+.research-gallery {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1.5rem;
+
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 2rem auto;
+}
+
+
+/* =========================================
+   INDIVIDUAL RESEARCH FIGURE
+   ========================================= */
+
+.research-figure {
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: 10px;
+
+  padding: 1rem;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   RESEARCH IMAGES
+   ========================================= */
+
+.research-figure img {
+  display: block;
+
+  width: 100%;
+
+  max-width: 350px;
+
+  height: 280px;
+
+  object-fit: contain;
+
+  margin: 0 auto;
+
+  border-radius: 6px;
+}
+
+
+/* =========================================
+   FIGURE CAPTION
+   ========================================= */
+
+.figure-caption {
+  margin: 0.8rem 0 0 0;
+
+  font-size: 0.88rem;
+
+  line-height: 1.5;
+
+  opacity: 0.8;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   CV
+   ========================================= */
+
+.cv-frame {
+  width: 100%;
+
+  height: 750px;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+a {
   color: #8ab4ff;
 }
 
-/* Figure caption */
-.figure-caption {
-  margin-top: 0.8rem;
-  font-size: 0.9rem;
-  opacity: 0.85;
+a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
   text-align: center;
+
+  padding: 2rem;
+
+  background: #040611;
+
+  font-size: 0.9rem;
+
+  opacity: 0.75;
+}
+
+
+/* =========================================
+   MOBILE / SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 3.5rem 1.5rem;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav {
+    gap: 1rem;
+
+    padding: 0.8rem;
+  }
+
+  section {
+    padding: 2.5rem 1.3rem;
+  }
+
+
+  /* Put research figures one below another */
+
+  .research-gallery {
+    grid-template-columns: 1fr;
+
+    max-width: 450px;
+  }
+
+
+  .research-figure img {
+    max-width: 100%;
+
+    height: auto;
+  }
+
+
+  /* Smaller CV on mobile */
+
+  .cv-frame {
+    height: 600px;
+  }
+
 }
